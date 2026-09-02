@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv
+venv/
+.venv/
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.claude
+.DS_Store
+.DS_Store?
+._*
+
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# Backup files
+*.bak
+*.tmp
+
+# Parked files pending a keep/delete decision (see bak/ itself for notes)
+bak/
