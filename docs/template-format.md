@@ -87,15 +87,16 @@ id = "02-1"
 image = "01_Ge_03_01_RG.jpg"
 ```
 
-- `level` — `"chapter"` in every template that has one (OBS's category
-  files additionally use `level = "category"` at the collection-index
-  level in some contexts — check the specific template before assuming).
+- `level` — `"chapter"` in TGS/DBS/John's category files; OBS's category
+  files say `level = "category"` instead. Cosmetic naming difference only
+  — both mean the same thing: a folder of stories.
 - `canon` — `"ot"`, `"nt"`, or `"mixed"` (DBS uses `"mixed"` for the three
   of its ten series that span both testaments — Series 1, Series 3,
-  Discover Christmas). **This field is display metadata only.** The export
-  pipeline derives canon per-book directly from each `[[ref:BOOK...]]` tag
-  in the `.md` content, never from this field — so a mixed-canon category
-  is not a special case for anything except client UI.
+  Discover Christmas). **This field is display metadata only** — a
+  client's own logic should derive the real canon per book directly from
+  each `[[ref:BOOK...]]` tag in the `.md` content, not from this field.
+  A mixed-canon category is not a special case for anything except UI
+  labeling.
 - OBS additionally carries `beg`/`count` per category (e.g. `beg = 1,
   count = 3` for category `01`) — the global OBS-TLF story number range
   (1-50) that category covers. Story `id`s under OBS categories are

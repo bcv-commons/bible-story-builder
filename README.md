@@ -19,13 +19,13 @@ No programming experience is required beyond editing text files.
 
 This repo owns exactly one thing: the `templates/` content itself — which
 Bible passages and images make up each story, in a format any client can
-render. It does not fetch Bible text/audio, run alignment, or publish to a
-CDN; those are `audio-sync` and `bibles`' jobs. A large amount of pipeline
-code that used to live here (catalog fetching, batch orchestration, timing
-download/bundling, release zipping) turned out to be redundant with what
-those two repos already do live, and was retired — see git history from
-before this cleanup if you need to dig up something from it (it isn't kept
-in the repo itself, tracked or otherwise).
+render. It's one of a small set of sibling repos that split up a larger
+pipeline: two others, `audio-sync` (runs speech-to-text alignment) and
+`bibles` (fetches Bible text/audio and publishes a catalog to a CDN),
+handle everything upstream of the templates themselves. This repo used to
+also fetch Bible content, decide what needed aligning, and download/bundle
+timing data — that all turned out to be redundant with what those two
+repos already do, so it was retired.
 
 See [docs/template-format.md](docs/template-format.md) for the full
 technical reference on the `index.toml`/`.md`/`locales` format this section
