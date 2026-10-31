@@ -9,8 +9,8 @@ Four templates exist today:
 | Template | Description | Books |
 |----------|-------------|-------|
 | John | Gospel of John | JHN (21 chapters) |
-| OBS | Open Bible Stories | 11 books (NT + OT selections); prefers real OBS-TLF/unfoldingWord-produced text/audio where it exists (see `[produced]` in `templates/OBS/index.toml`), falling back to verse-matched content otherwise |
-| TGS | The Greatest Story | 19 books (comprehensive OT + NT) |
+| OBS | Open Bible Stories | 11 books (selections from the whole Bible); prefers real OBS-TLF/unfoldingWord-produced text/audio where it exists (see `[produced]` in `templates/OBS/index.toml`), falling back to verse-matched content otherwise |
+| TGS | The Greatest Story | 19 books (the whole Bible, Genesis to Revelation) |
 | DBS | Discover App: Scripture Sets | 18 books across 10 topical/discipleship series |
 
 No programming experience is required beyond editing text files.
@@ -57,7 +57,7 @@ The fastest way to draft a new template (or add stories to one) is a plain
 text outline. `templates/TGS/source/story.txt` is a real example:
 
 ```
-Part One — Scenes from the Old Testament
+Part One — Scenes from the Tanakh
 
 • Prologue: In the beginning
     • Genesis 1:1–5; 1:26–31; 2:7
@@ -72,9 +72,9 @@ Part One — Scenes from the Old Testament
     • God's covenant — Genesis 15:5–6
 ```
 
-- `Part One` / `Part Two` headers split the collection into OT/NT categories.
+- `Part One` / `Part Two` headers split the collection into its two parts (Tanakh and Apostolic Writings).
   `== Category Name` also works, for any number of named categories (not
-  just a two-way OT/NT split) — see `templates/DBS/source/story.txt`.
+  just a two-part split) — see `templates/DBS/source/story.txt`.
 - Numbered lines (`1.`, `2.`, ...) start a new story; bullet-only lines
   (`• Prologue: ...`) mark prologue/epilogue stories.
 - Indented bullets are the passages that make up that story, as
